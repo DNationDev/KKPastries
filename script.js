@@ -42,6 +42,7 @@ const slider = () => {
     slides.forEach(slide =>{
         console.log(slide)
         slide.style.transform = `translateX(-${counter * 100}%)`;
+        
     })
 }
 

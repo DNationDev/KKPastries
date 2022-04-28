@@ -179,7 +179,7 @@ body {
     right: -40px;
     background-color: teal;
     font-size: 40px;
-    transition: right .5s ease-out;
+    transition: right .5s, ease-out;
 }
 
 .nextBtn:hover {
@@ -206,6 +206,7 @@ body {
     height: 250px;
     background-color: white;
     position: relative;
+    transition: transform .5s ease-in-out;
     
 }
 .mid-container {
