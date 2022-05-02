@@ -62,11 +62,27 @@ body {
     display: flex;
     align-content: space-between;
 }
+
+#search {
+    font-size: 1rem;
+    width: 200px;
+    height: 20px;
+    margin-top: .5rem;
+
+}
+.search-container {
+    display: flex;
+    margin: 0;
+}
 .icon-container i{
     width: 100%;
     padding: 15px;
     color: teal;
     cursor: pointer;
+}
+
+.hide {
+    display: none;
 }
 
 .banner {
