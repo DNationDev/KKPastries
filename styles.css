@@ -81,8 +81,37 @@ body {
     cursor: pointer;
 }
 
-.hide {
+.dropdown {
+    list-style-type: none;
+    top: 10px;
+    position: absolute;
+    display: block;
+    z-index: 10;
+    background-color: #f1f1f1;
+    padding: 0;
+}
+
+.search-item a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.search-item {
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
     display: none;
+}
+
+.search-item:hover {
+    background-color: lightgray;
+    width: auto;
+}
+
+.hide {
+    display: block;
 }
 
 .banner {

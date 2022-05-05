@@ -11,6 +11,8 @@ const slides = document.querySelectorAll('.slide')
 const search = document.getElementById('search');
 const searchIcon = document.querySelector('.search-icon');
 const searchContainer = document.querySelector('.search-container')
+const searchItem = document.querySelectorAll('.search-item');
+const dropDown = document.querySelector('.dropdown')
 
 
 let products = [{
@@ -86,14 +88,29 @@ nextBtn.addEventListener('click', e =>{
 })
 
 
-searchContainer.addEventListener('click', e =>{
+let newItems = [];
+searchContainer.addEventListener('input', e =>{
     let input = e.target.value.toLowerCase();
+    
+
     products.forEach(item =>{
-        console.log(item)
-        let isVisible = item.name.toLowerCase().includes(input);
-        if(isVisible){
-            console.log(item.id)
-        }
+        let {id, name} = item;
+        let isVisible = name.toLowerCase().includes(input);
+        
+        searchItem.forEach((items, index) =>{
+            items.setAttribute('id', index)
+            if(!isVisible && id === (index + 1)){
+                
+                items.style.cursor = 'pointer';
+                items.innerHTML = `<a href=''>${item.name}</a>`;
+                
+                items.classList.toggle('hide');
+                console.log(items)
+            } 
+            
+        })
+        console.log(input);
+        
+        
     })
-    console.log(input);
 })
