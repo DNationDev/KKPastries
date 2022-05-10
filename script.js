@@ -99,8 +99,8 @@ searchContainer.addEventListener('input', e =>{
         
         searchItem.forEach((items, index) =>{
             items.setAttribute('id', index)
-            if(!isVisible && id === (index + 1)){
-                
+            if(isVisible && id === (index + 1)){
+                 
                 items.style.cursor = 'pointer';
                 items.innerHTML = `<a href=''>${item.name}</a>`;
                 
